@@ -5,11 +5,11 @@
   &:visited{
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: $font-size-default;
 
     padding: 1.5rem 4rem;
     display: inline-block; /*当父标签text-align: center时，inline-block会被居中，相当与文字*/
-    margin-top: 4.8rem;
+    margin-top: 4rem;
     border-radius: 100px;
 
     position: relative;/*这个标签使得::after的Bug消失了*/
@@ -35,6 +35,15 @@
       background-color: $color-white;
     }
   }
+
+  &--green{
+    background-color: $color-primary;
+    color: $color-white;
+    &::after{
+      background-color: $color-primary;
+    }
+  }
+
   &::after{
     content: "";
     display: inline-block;
@@ -55,16 +64,26 @@
 }
 
 .btn-text {
+  transition: all .35s ease-in;
   &:link,
   &:visited {
-
+    font-size: $font-size-default;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
   }
 
-  &.hover {
-
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateY(-2px);
   }
 
   &:active {
-
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateY(1px);
   }
 }
