@@ -1,6 +1,8 @@
 @import "../abstracts/variable";
 
 .btn{
+
+  &,
   &:link,
   &:visited{
     text-transform: uppercase;
@@ -9,12 +11,15 @@
 
     padding: 1.5rem 4rem;
     display: inline-block; /*当父标签text-align: center时，inline-block会被居中，相当与文字*/
-    margin-top: 4rem;
+    margin-top: 2rem;
     border-radius: 100px;
 
     position: relative;/*这个标签使得::after的Bug消失了*/
 
     transition: all .2s;
+
+    border: none;
+    cursor: pointer;
   }
   &:hover{
     transform: translateY(-3px);
@@ -24,7 +29,9 @@
       opacity: 0;
     }
   }
-  &:active{
+  &:active,
+  &:focus{
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1.2rem rgba($color-black,.12);
   }
