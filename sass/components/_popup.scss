@@ -38,6 +38,9 @@
   &__img {
     display: block;
     width: 100%;
+    @include respond(tab-land){
+
+    }
   }
   &__right {
     width: 66.666%;

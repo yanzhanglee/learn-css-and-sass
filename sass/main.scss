@@ -1,10 +1,11 @@
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variable";
 @import "base/base";
 @import "base/animation";
 @import "base/typography";
 @import "base/utilities";
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variable";
+
 
 @import "pages/home";
 
